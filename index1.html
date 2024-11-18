@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+ 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/preview.css" type="text/css">
+	<script type="text/javascript" src="js/include_script.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<section>
+			<div class="dynamicContent">
+				<div class="container">
+					<div class="row">
+						<div class="span9">
+							<div class="cont_bg">
+								<div class="line_vert">
+									<div class="row">
+										<div class="span3 offset1">
+											<h2>about us</h2>
+											<img src="img/page1_pic1.png" class="marg_1" alt="">
+											<p class="color_1 marg_2"> Le nostre ricette sono state tramandate di generazione in generazione nella mia famiglia, cercando sempre di affinare e innovare le nostre conoscenze. Quando si parla di cibo, il mio cuore batte già e puoi star certo che quando lo proverai ne sentirai il vero sapore un'opera d'arte.</p>
+											
+											<p><a href="index5.html" class="btn btn-primary">Read More</a></p>
+										</div>
+										<div class="span4 offset1">
+											<h2><span>popular</span> dishes</h2>
+											<div class="outside">
+												<div class="scroll">
+				                                    <div class="row gall">
+				                                    	<div class="span3">
+															<div class="thumbnail">
+																<a href="img/image_blank_black.jpg"><img src="img/page1_pic2.png" alt=""></a>
+																<div class="caption">
+																	<p><a href="index5.html">fatto in casa</a></p>
+																	<p>Carne con pasta al sugo</p>
+																</div>
+																<div class="line_hor"></div>
+															</div>
+															<div class="thumbnail">
+																<a href="img/image_blank_black.jpg"><img src="img/page1_pic3.png" alt=""></a>
+																<div class="caption">
+																	<p><a href="index5.html">cupcake</a></p>
+																	<p>mini torta al cioccolato con ripieno gourmet</p>
+																</div>
+																<div class="line_hor"></div>
+															</div>
+															<div class="thumbnail">
+																<a href="img/image_blank_black.jpg"><img src="img/page1_pic2.png" alt=""></a>
+																<div class="caption">
+																	<p><a href="index5.html">fatto in casa</a></p>
+																	<p>Carne con pasta al sugo</p>
+																</div>
+																<div class="line_hor"></div>
+															</div>
+															<div class="thumbnail">
+																<a href="img/image_blank_black.jpg"><img src="img/page1_pic3.png" alt=""></a>
+																<div class="caption">
+																	<p><a href="index5.html">cupcake</a></p>
+																	<p>mini torta al cioccolato con ripieno gourmet</p>
+																</div>
+															</div>
+														</div>
+				                                    </div>
+				                                </div>
+			                            	</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script>
+		var MSIE = ($.browser.msie) && ($.browser.version <= 8);
+		$('.gall .thumbnail>a').attr('rel','appendix')
+	    .prepend('<span class="sitem_over"><strong></strong></span>')
+	    $('.gall .thumbnail>a').fancybox({
+	        'transitionIn': 'elastic',
+	    	'transitionOut': 'elastic',
+	    	'speedIn': 500,
+	    	'speedOut': 300,
+	        'centerOnScroll': true,
+	        'overlayColor': '#000'
+	    });
+		
+		$('.gall .thumbnail>a')
+	    .find('strong').css('top','200px').end()
+	    .hover(
+	        function(){
+	            if (!MSIE){
+	                $(this).children('.sitem_over').css({display:'block',opacity:'0'}).stop().animate({'opacity':1}).end() 
+	                .find('strong').css({'opacity':0}).stop().animate({'opacity':1,'top':'0'},350,'easeInOutExpo');
+	            } else { 
+	                $(this).children('.sitem_over').stop().show().end()
+	                .find('strong').stop().show().css({'top':'0'});
+	            }
+	        },
+	        function(){
+	            if (!MSIE){
+	                $(this).children('.sitem_over').stop().animate({'opacity':0},1000,'easeOutQuad',function(){$(this).children('.sitem_over').css({display:'none'})}).end()  
+	                .find('strong').stop().animate({'opacity':0,'top':'200px'},1000,'easeOutQuad');  
+	            } else {
+	                $(this).children('.sitem_over').stop().hide().end()
+	                .find('strong').stop().hide();
+	            }            
+	        }
+	    );
+	</script>
+</body>
+</html>
